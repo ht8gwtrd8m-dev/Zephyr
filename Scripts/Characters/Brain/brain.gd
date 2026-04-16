@@ -90,6 +90,7 @@ var anim_parameters = {
 var is_hitching : bool = false
 var is_building : bool = false
 var is_sneezing : bool = false
+var total_sneezes: int = 0
 var is_sighing : bool = false
 var is_sniffing : bool = false
 
@@ -316,6 +317,7 @@ func on_sneeze_anim():
 	reset_tracker_params()
 	reset_state_parameters()
 	is_sneezing = true
+	total_sneezes += 1
 
 func on_sigh_anim():
 	on_sigh.emit()
